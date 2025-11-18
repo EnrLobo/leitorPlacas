@@ -2,7 +2,7 @@ import cv2
 import pytesseract
 import os
 
-pytesseract.pytesseract.tesseract_cmd = r'C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Tesseract-OCR\tesseract.exe'
+pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
 
 cascade_path = 'haarcascade_russian_plate_number.xml'
 
@@ -17,9 +17,9 @@ if not os.path.exists(image_path):
     exit()
 
 plate_cascade = cv2.CascadeClassifier(cascade_path)
-image = cv2.imread(image_path)
+img = cv2.imread(image_path)
 
-gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 plates = plate_cascade.detectMultiScale(gray, scaleFactor=1.1, minNeighbors=4)
 
 print(f"Placas detectadas: {len(plates)}")
