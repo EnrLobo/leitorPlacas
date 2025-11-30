@@ -4,7 +4,7 @@ from datetime import datetime, timedelta
 
 # --- CONFIGURAÇÕES ---
 DB_NAME = "estacionamento.db"
-TEMPO_LIMITE_MINUTOS = 1 # Coloquei 1 minuto para você conseguir testar rápido!
+TEMPO_LIMITE_MINUTOS = 1 # 1 minuto para conseguir testar rápido!
 # No mundo real, seria algo como: TEMPO_LIMITE_MINUTOS = 240 (4 horas)
 
 def conectar():

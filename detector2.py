@@ -12,7 +12,7 @@ print("Carregando modelo EasyOCR...")
 reader = easyocr.Reader(['en'], gpu=False)
 print("Modelo carregado.")
 
-# --- FUNÇÃO DE CORREÇÃO TURBINADA ---
+# --- FUNÇÃO DE CORREÇÃO
 def corrigir_placa(texto):
     # Limpa caracteres indesejados
     texto = texto.replace("-", "").replace(" ", "").replace(".", "").upper()

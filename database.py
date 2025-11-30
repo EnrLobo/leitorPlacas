@@ -55,7 +55,7 @@ def adicionar_veiculo(placa, proprietario, tipo, status):
     except Exception as e:
         print(f"Erro ao adicionar veículo: {e}")
     finally:
-        conn.close() # A CORREÇÃO MÁGICA ESTÁ AQUI (Fecha sempre!)
+        conn.close() 
 
 def buscar_veiculo(placa):
     """Busca informações de um veículo pela placa."""
@@ -83,7 +83,7 @@ def registrar_acesso(placa):
     """Registra a entrada de um veículo agora."""
     # Para registrar acesso de desconhecidos, precisamos garantir que a tabela aceite
     # Se o veículo não existe na tabela 'veiculos', o SQLite pode reclamar da Foreign Key.
-    # Vamos simplificar e inserir apenas se não der erro de chave.
+    
     conn = conectar()
     try:
         cursor = conn.cursor()
@@ -93,8 +93,8 @@ def registrar_acesso(placa):
         conn.commit()
         print(f"[LOG] Acesso registrado para {placa} às {agora}")
     except sqlite3.IntegrityError:
-        # Se der erro de chave estrangeira (veículo não cadastrado), a gente ignora ou cadastra como visitante
-        # Para este trabalho, vamos deixar passar para não travar.
+
+
         pass
     except Exception as e:
         print(f"Erro ao registrar acesso: {e}")
@@ -108,5 +108,5 @@ if __name__ == "__main__":
     # Cadastro do Fusca
     adicionar_veiculo("BRA2E19", "Seu Madruga", "PARTICULAR", "AUTORIZADO")
     
-    # Cadastro do "Vilão"
+    # Cadastro de outro veículo
     adicionar_veiculo("BEE4R22", "Policia", "Oficial", "AUTORIZADO")
