@@ -109,4 +109,4 @@ if __name__ == "__main__":
     adicionar_veiculo("BRA2E19", "Seu Madruga", "PARTICULAR", "AUTORIZADO")
     
     # Cadastro do "Vilão"
-    adicionar_veiculo("BEE4R22", "Dick Vigarista", "PARTICULAR", "PROIBIDO")
+    adicionar_veiculo("BEE4R22", "Policia", "Oficial", "AUTORIZADO")
