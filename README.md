@@ -77,4 +77,4 @@ Estrutura do Projeto
 - haarcascade_*.xml: Modelo pré-treinado para detecção de placas.
 
 ### Autores
-Arielce Junior, @EnrLobo e Walter Dias.
+Arielce Junior, Enrique Lobo e Walter Dias.
